@@ -39,6 +39,8 @@ public class Calculator : MonoBehaviour {
 				case "/":
 				case "*":
 				case "=":
+			case "Mathf.Sqrt":
+			case "Mathf.Pow":
 				Calculate(s);
 				break;
 			case "ce":
@@ -105,6 +107,13 @@ public class Calculator : MonoBehaviour {
 			case "/":
 				result = x / y;
 				break;
+			case "Mathf.Sqrt":
+				result = Mathf.Sqrt(x);
+				break;
+			case "Mathf.Pow":
+				result = Mathf.Pow(x, y);
+				break;
+
 		}
 
 		return result;

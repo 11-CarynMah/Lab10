@@ -94,5 +94,47 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "/");
             Assert.AreEqual(result, 2.5f);
         }
+
+        [Test]
+        public void TestSquareRoot()
+        {
+            // Use the Assert class to test conditions
+            result = Calculator.CalculatePair(5, 0, "Mathf.Sqrt");
+            Assert.AreEqual(result, 2.236067);
+        }
+
+        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+        // `yield return null;` to skip a frame.
+        [UnityTest]
+        public IEnumerator TestUnitySquareRoot()
+        {
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 0, "Mathf.Sqrt");
+            Assert.AreEqual(result, 2.236067);
+        }
+
+        [Test]
+        public void TestPower()
+        {
+            // Use the Assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "Mathf.Pow");
+            Assert.AreEqual(result, 25);
+        }
+
+        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+        // `yield return null;` to skip a frame.
+        [UnityTest]
+        public IEnumerator TestUnityPower()
+        {
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "Mathf.Pow");
+            Assert.AreEqual(result, 25);
+        }
     }
 }
