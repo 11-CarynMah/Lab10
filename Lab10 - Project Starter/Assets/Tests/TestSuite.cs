@@ -99,8 +99,8 @@ namespace Tests
         public void TestSquareRoot()
         {
             // Use the Assert class to test conditions
-            result = Calculator.CalculatePair(5, 0, "Mathf.Sqrt");
-            Assert.AreEqual(result, 2.236067);
+            result = Calculator.CalculatePair( 5, 0, "Mathf.Sqrt");
+            Assert.AreEqual(result, 2.236068);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
@@ -113,7 +113,7 @@ namespace Tests
             yield return null;
 
             result = Calculator.CalculatePair(5, 0, "Mathf.Sqrt");
-            Assert.AreEqual(result, 2.236067);
+            Assert.AreEqual(result, 2.236068);
         }
 
         [Test]
