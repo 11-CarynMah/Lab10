@@ -99,8 +99,8 @@ namespace Tests
         public void TestSquareRoot()
         {
             // Use the Assert class to test conditions
-            result = Calculator.CalculatePair( 5, 0, "Mathf.Sqrt");
-            Assert.AreEqual(result, 2.236068);
+            result = Calculator.CalculatePair( 5, 2, "√");
+            Assert.AreEqual(result, 2.236068f);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
@@ -112,15 +112,15 @@ namespace Tests
             // Use yield to skip a frame.
             yield return null;
 
-            result = Calculator.CalculatePair(5, 0, "Mathf.Sqrt");
-            Assert.AreEqual(result, 2.236068);
+            result = Calculator.CalculatePair(5, 2, "√");
+            Assert.AreEqual(result, 2.236068f);
         }
 
         [Test]
         public void TestPower()
         {
             // Use the Assert class to test conditions
-            result = Calculator.CalculatePair(5, 2, "Mathf.Pow");
+            result = Calculator.CalculatePair(5, 2, "^");
             Assert.AreEqual(result, 25);
         }
 
@@ -133,7 +133,7 @@ namespace Tests
             // Use yield to skip a frame.
             yield return null;
 
-            result = Calculator.CalculatePair(5, 2, "Mathf.Pow");
+            result = Calculator.CalculatePair(5, 2, "^");
             Assert.AreEqual(result, 25);
         }
     }
